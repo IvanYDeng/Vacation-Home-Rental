@@ -1,0 +1,39 @@
+$button-color: #1e98d7;
+$home-content-width: 85%;
+$button-hover-color: #0062cc;
+
+@mixin FlexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin DivImg() {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.dev {
+  border: 1px solid red;
+}
+
+@mixin textLight {
+  font-size: 0.75rem;
+  color: grey;
+}
+
+@mixin buttons {
+  background-color: $button-color;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.textLight {
+  font-size: 0.75rem;
+  color: grey;
+}

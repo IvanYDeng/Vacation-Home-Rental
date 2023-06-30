@@ -1,0 +1,614 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+/* Mobile (first) : Anything smaller than 600px */
+
+.flex-v-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-space-evenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.dev {
+  border: 1px solid red;
+}
+
+.box {
+  border: 1px solid grey;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.75em;
+  height: 41px;
+  font-size: large;
+}
+
+.search-hero {
+  background-image: url("https://picsum.photos/425/190");
+  background-repeat: none;
+  background-size: cover;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  justify-content: space-evenly;
+}
+
+.search-guests {
+  width: 50px;
+}
+
+.search-search {
+  width: 100px;
+}
+
+.listing-card {
+  display: flex;
+  margin: 1em;
+  padding-top: 0.25em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid grey;
+}
+
+.listing-info {
+  margin-left: 0.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+#listing-price {
+  grid-row: 2/4;
+  grid-column: 4;
+  display: flex;
+  justify-content: center;
+}
+
+#listing-name {
+  grid-column: 1/3;
+}
+
+#listing-rating {
+  grid-column: 3/5;
+}
+
+#listing-desc {
+  grid-row: 2;
+  grid-column: 1/4;
+}
+
+#search-desc {
+  display: none;
+}
+
+#attr {
+  padding: 0.25em;
+}
+
+.listing-attributes {
+  grid-row: 3;
+  grid-column: 1/4;
+}
+
+#search-map {
+  height: 30vh;
+  max-width: 100%;
+}
+
+.filters-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: 1px solid grey;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+#filter-text1 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#filter-text2 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.search-listing {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  margin-bottom: 1.5em;
+}
+
+.search-listing-info {
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 15vh;
+}
+
+.location-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
+  border-top: 1px solid grey;
+}
+
+.map-container {
+  width: 100%;
+  height: 25vh;
+  background-image: url("./images/placeholder-map.png");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.image-gallery {
+  position: relative;
+  width: 100%;
+  height: 25vh;
+  overflow: hidden;
+}
+
+.gallery__image {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* animation is not finalized */
+.animate {
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.attributes-container {
+  width: 100%;
+  height: 10vh;
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.description {
+  width: 100%;
+  height: 17vh;
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 0 1em;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
+}
+
+.suggested-filters {
+  display: none;
+}
+
+#img_1 {
+  background: url("images/placeholder-map.png");
+  background-size: cover;
+}
+#img_2 {
+  background: url("https://picsum.photos/400");
+  background-size: cover;
+}
+#img_3 {
+  background: url("images/placeholder-map.png");
+  background-size: cover;
+}
+#img_4 {
+  background: url("https://picsum.photos/400");
+  background-size: cover;
+}
+.nearby-container {
+  display: none;
+}
+
+.search-attributes {
+  display: none;
+}
+
+.rental-details,
+.price-options {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.price-addons {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.payment-section {
+  width: 90%;
+  margin: auto;
+  padding: 1em;
+}
+
+#payment-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#payment-details input {
+  padding: 0.25em;
+}
+
+#payment-details button {
+  width: 5em;
+}
+
+#cvv,
+#exp {
+  width: 60px;
+}
+
+.payment-input {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+#paypal-btn {
+  margin-top: 0.5em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.paypal-btn {
+  width: 5em;
+}
+
+.tos {
+  display: none;
+}
+
+.listing-card-img {
+  background: url("https://picsum.photos/150");
+  background-size: cover;
+  flex: 0 0 150px;
+  height: 150px;
+}
+
+#price-filter {
+  display: none;
+}
+
+.ratings-filter {
+  display: none;
+}
+.min-max {
+  display: none;
+}
+.ad-block {
+  display: none;
+}
+
+#optional-desc {
+  display: none;
+}
+
+#checkout-imgs {
+  display: none;
+}
+
+/* Tablet : 600px - 960px */
+@media only screen and (min-width: 600px) {
+  .suggested-filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 30vh;
+    gap: 15px;
+    margin-top: 1em;
+  }
+  #filter1 {
+    grid-column: 1;
+    grid-row: 1/3;
+    height: 100%;
+    background: url("https://picsum.photos/400");
+    background-size: cover;
+  }
+  #filter2 {
+    grid-column: 2;
+    grid-row: 1;
+    height: 100%;
+    background: url("https://picsum.photos/400");
+    background-size: cover;
+  }
+  #filter3 {
+    grid-column: 2;
+    grid-row: 2;
+    height: 100%;
+    background: url("https://picsum.photos/400");
+    background-size: cover;
+  }
+  #filter4 {
+    grid-column: 3;
+    grid-row: 1;
+    height: 100%;
+    background: url("https://picsum.photos/400");
+    background-size: cover;
+  }
+  #filter5 {
+    grid-column: 3;
+    grid-row: 2;
+    height: 100%;
+    background: url("https://picsum.photos/400");
+    background-size: cover;
+  }
+  .search-hero {
+    height: 35vh;
+    background: url("https://picsum.photos/820/450");
+  }
+  .search-container {
+    height: 5vh;
+  }
+  .search-search {
+    width: 200px;
+    padding: 0.25em;
+  }
+  .search-guests {
+    width: 75px;
+    padding: 0.25em;
+  }
+  #listing-name {
+    grid-column: 1;
+  }
+  #search-rating {
+    grid-column: 3/4;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  #listing-rating {
+    grid-column: 2/3;
+    grid-row: 1;
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+  }
+  #hacky-bs {
+    align-items: center;
+  }
+  #img_1 {
+    background-image: url("https://picsum.photos/820/500");
+  }
+  #img_2 {
+    background-image: url("https://picsum.photos/820/501");
+  }
+  #img_3 {
+    background-image: url("https://picsum.photos/820/495");
+  }
+  #img_4 {
+    background-image: url("https://picsum.photos/820/503");
+  }
+  .info-wrapper {
+    display: flex;
+    height: 20vh;
+  }
+  .attributes-container {
+    width: 100%;
+    height: 50%;
+    margin-top: 0;
+  }
+  .description {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons-container {
+    flex-direction: row;
+    height: 30px;
+    margin-top: 2em;
+  }
+  .attr-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    border: 1px solid grey;
+    margin-top: 2em;
+  }
+  .nearby-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1.5em;
+  }
+  #nearby-title {
+    grid-column: 1/3;
+  }
+  .search-listing {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    /* padding-top: 0.25em; */
+    /* padding-bottom: 1.5em; */
+    border-bottom: 1px solid grey;
+  }
+  .search-listing img {
+    width: 35%;
+  }
+  .search-listing-info {
+    margin-left: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    width: 100%;
+  }
+  .search-name {
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+  }
+  .room-info {
+    display: none;
+  }
+  .search-price {
+    grid-column: 4;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-attributes {
+    display: flex;
+    grid-row: 3;
+    grid-column: 1/3;
+  }
+  #search-desc {
+    display: block;
+    grid-row: 2;
+    grid-column: 1/4;
+  }
+  .image-gallery {
+    height: 40vh;
+  }
+  .tos {
+    display: block;
+    width: 90%;
+    margin: auto;
+    color: grey;
+    margin-top: 1em;
+  }
+  #listing-price {
+    align-items: center;
+    grid-row: 1/4;
+  }
+  #listing-map {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/* Desktop : 960px < */
+@media only screen and (min-width: 961px) {
+  .search-hero {
+    background: url("https://picsum.photos/1400/450");
+    height: 45vh;
+  }
+  .suggested-filters {
+    height: 40vh;
+  }
+  #filter1,
+  #filter2,
+  #filter3,
+  #filter4,
+  #filter5 {
+    background: url("https://picsum.photos/700");
+  }
+  .search-container {
+    height: 8vh;
+    width: 55%;
+  }
+  .search-container input {
+    height: 2em;
+    padding: 1em;
+  }
+  .listing-card-img {
+    background: url("https://picsum.photos/300/150");
+    background-size: cover;
+    flex: 0 0 300px;
+    height: 150px;
+  }
+  .info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1.25fr;
+    grid-template-rows: 1fr;
+    height: 37vh;
+    /* grid-template-areas: "map attr desc"; */
+  }
+  .attr-wrapper {
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .map-container {
+    position: relative !important;
+    grid-column: 1;
+    grid-row: 1;
+    height: 100%;
+  }
+  .description {
+    grid-column: 3;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  #optional-desc {
+    display: block;
+  }
+  .image-gallery {
+    height: 50vh;
+  }
+}
